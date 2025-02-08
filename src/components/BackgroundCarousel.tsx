@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Paris1 from "../assets/paris1.jpeg";
 import Paris2 from "../assets/paris2.jpeg";
@@ -23,31 +23,33 @@ interface BackgroundCarouselProps {
 
 export function BackgroundCarousel({ destination }: BackgroundCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = destinations[destination as keyof typeof destinations] || [];
+  const imagesRef = useRef(
+    destinations[destination as keyof typeof destinations] || []
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+      setCurrentImageIndex((prev) => (prev + 1) % imagesRef.current.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [images.length]);
+  }, []);
 
   return (
-    <div className="fixed inset-0 -z-10">
-      {images.map((url, index) => (
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      {imagesRef.current.map((url, index) => (
         <div
           key={url}
-          className={`
-            absolute inset-0 bg-cover bg-center transition-opacity duration-1000
-            ${index === currentImageIndex ? "opacity-100" : "opacity-0"}
-          `}
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentImageIndex ? "opacity-100" : "opacity-0"
+          }`}
           style={{
             backgroundImage: `url(${url})`,
+            height: "100%", // Cover the entire parent container
           }}
         />
       ))}
-      <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
     </div>
   );
 }

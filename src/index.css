@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,9 +9,15 @@ body {
 }
 
 .font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .font-dancing {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
+}
+/* Add this to your index.css or global styles */
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
