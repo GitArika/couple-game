@@ -65,7 +65,7 @@ export function PlayerCard({ player, isWinning }: PlayerCardProps) {
         <div
           className={`
           flex items-center justify-center gap-2 text-2xl font-bold animate-pulse
-          ${isFemale ? "text-pink-500" : "text-blue-300"}
+          ${isFemale ? "text-pink-500" : "text-blue-400"}
         `}
         >
           <Heart className="fill-current" size={20} />

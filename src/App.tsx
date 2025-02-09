@@ -9,6 +9,16 @@ import Beatriz from "./assets/beatriz.jpg";
 const gameState = {
   players: [
     {
+      id: "2",
+      name: "Ariel",
+      age: 26,
+      gender: "male",
+      photo: Ariel,
+      title: "Gerente de Tecnologia",
+      points: 200,
+      destination: "Los Angeles",
+    },
+    {
       id: "1",
       name: "Beatriz",
       age: 25,
@@ -18,18 +28,8 @@ const gameState = {
       points: 100,
       destination: "Paris",
     },
-    {
-      id: "2",
-      name: "Ariel",
-      age: 26,
-      gender: "male",
-      photo: Ariel,
-      title: "Gerente de Tecnologia",
-      points: 0,
-      destination: "Los Angeles",
-    },
   ],
-  currentDestination: "Paris",
+  currentDestination: "California",
 };
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
       {/* Header */}
       <header className="w-full py-6 px-4 text-center relative z-10">
         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full">
-          <MapPin className="text-pink-500" />
+          <MapPin className="text-blue-400" />
           <h1 className="font-montserrat text-2xl md:text-3xl text-white">
             Destino atual: {gameState.currentDestination}
           </h1>

@@ -4,6 +4,10 @@ import Paris1 from "../assets/paris1.jpeg";
 import Paris2 from "../assets/paris2.jpeg";
 import Paris3 from "../assets/paris3.jpeg";
 import Paris4 from "../assets/paris4.jpeg";
+import Califa1 from "../assets/califa1.jpeg";
+import Califa2 from "../assets/califa2.jpeg";
+import Califa3 from "../assets/califa3.jpeg";
+import Califa4 from "../assets/califa4.jpeg";
 
 const destinations = {
   Paris: [Paris1, Paris2, Paris3, Paris4],
@@ -11,10 +15,7 @@ const destinations = {
     "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
     "https://images.unsplash.com/photo-1573843981267-be1999ff37cd",
   ],
-  Veneza: [
-    "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
-    "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f",
-  ],
+  California: [Califa1, Califa2, Califa3, Califa4],
 };
 
 interface BackgroundCarouselProps {
