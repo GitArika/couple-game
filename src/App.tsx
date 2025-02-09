@@ -26,7 +26,7 @@ const gameState = {
       photo: Beatriz,
       title: "Biomédica",
       points: 100,
-      destination: "Paris",
+      destination: "Brasil",
     },
   ],
   currentDestination: "California",
