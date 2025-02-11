@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import Paris1 from "../assets/paris1.jpeg";
-import Paris2 from "../assets/paris2.jpeg";
-import Paris3 from "../assets/paris3.jpeg";
-import Paris4 from "../assets/paris4.jpeg";
+import Brasil1 from "../assets/brasil1.jpeg";
+import Brasil2 from "../assets/brasil2.jpeg";
+import Brasil3 from "../assets/brasil3.jpeg";
+import Brasil4 from "../assets/brasil4.jpeg";
 import Califa1 from "../assets/califa1.jpeg";
 import Califa2 from "../assets/califa2.jpeg";
 import Califa3 from "../assets/califa3.jpeg";
 import Califa4 from "../assets/califa4.jpeg";
 
 const destinations = {
-  Paris: [Paris1, Paris2, Paris3, Paris4],
+  Brasil: [Brasil1, Brasil2, Brasil3, Brasil4],
   Maldivas: [
     "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
     "https://images.unsplash.com/photo-1573843981267-be1999ff37cd",
