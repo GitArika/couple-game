@@ -57,7 +57,7 @@ function App() {
         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full">
           <MapPin className="text-blue-400" />
           <h1 className="font-montserrat text-2xl md:text-3xl text-white">
-            Destino atual: Brasil
+            Destino atual: Los Angeles
           </h1>
         </div>
       </header>
